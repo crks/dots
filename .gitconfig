@@ -1,0 +1,9 @@
+[user]
+	name = preston@nooch.com
+	email = preston@nooch.com
+[core]
+	editor = vim
+[http]
+	sslVerify = false
+[https]
+	sslVerify = false

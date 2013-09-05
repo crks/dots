@@ -1,0 +1,12 @@
+#!/bin/bash
+
+CLOCK_FORMAT="%I:%M"
+
+clock() {
+  echo $(date +$CLOCK_FORMAT)
+}
+
+
+while :; do
+  echo "$(clock)   "
+done | dzen2 -fg "#746c40" -bg "#170f0d" -ta right -w 90 -h 20 -x 1170 -y 10 -fn "-*-terminus-*-r-*-*-*-*-*-*-*-*-*-*"
