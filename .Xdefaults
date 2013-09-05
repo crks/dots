@@ -1,0 +1,41 @@
+urxvt*foreground: #746C48
+urxvt*background: #170f0D
+urxvt*scrollBar: false
+!urxvt*font: -*-terminus-*-*-*-*-12-*-*-*-*-*-koi8-*
+urxvt*font: xft:terminus:pixelsize=13
+! Normal
+! color0    black
+! color1    red
+! color2    green
+! color3    yellow
+! color4    blue
+! color5    purple
+! color6    cyan
+! color7    white
+!BLACK
+urxvt*color0:             #392925
+urxvt*color8:             #544B2E
+!RED
+urxvt*color1:             #98724C
+urxvt*color9:             #AF652F
+!GREEN
+urxvt*color2:             #908F32
+urxvt*color10:            #C3C13D
+!YELLOW
+urxvt*color3:             #AA964C
+urxvt*color11:            #C88558
+!BLUE
+urxvt*color4:             #78854E
+urxvt*color12:            #70A16C
+!MAGENTA
+urxvt*color5:             #685644
+urxvt*color13:            #98724C
+!CYAN
+urxvt*color6:             #5C5142
+urxvt*color14:            #778725
+!WHITE
+urxvt*color7:             #C88558
+urxvt*color15:            #E4DC8C
+
+urxvt*scrollbar: false
+urxvt*internalborder: 6.
