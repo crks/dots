@@ -1,4 +1,4 @@
-#------------------------------
+#jjk::q#------------------------------
 # History stuff
 #------------------------------
 HISTFILE=~/.histfile
@@ -10,7 +10,7 @@ SAVEHIST=1000
 #------------------------------
 export EDITOR="nano"
 export PAGER="vimpager"
-export PATH="/opt/local/bin:/opt/local/sbin:/usr/X11/include:${PATH}:/Users/pdhults/.colorMakeSyms:${HOME}/bin"
+export PATH="/opt/local/include:/opt/local/bin:/opt/local/sbin:/usr/bin:/usr/X11/include:${PATH}:/Users/pdhults/.colorMakeSyms:${HOME}/bin"
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$HOMEBREW_PREFIX/lib:$HOMEBREW_PREFIX/include:/usr/local/Cellar/libffi/3.0.11/lib/pkgconfig
 # Dircolors
 #-----------------------------
@@ -46,6 +46,11 @@ bindkey "\eOF" end-of-line
 #------------------------------
 # Alias stuff
 #------------------------------
+alias rb="/usr/local/Cellar/ruby/2.0.0-p247/bin/ruby"
+alias rails="~/.rbenv/versions/2.0.0-p247/bin/rails"
+alias pgres="/Applications/Postgres.app/Contents/MacOS/bin/psql"
+alias noochserve="ssh -L 33891:10.200.1.10:3389 -L 33892:10.200.1.20:3389 -L 33894:10.200.1.40:3389 preston@74.117.228.123 -p22295"
+alias scrot="~/.custom/scrot-osx/src/scrot"
 alias music="/opt/local/bin/mpd && /opt/local/bin/ncmpcpp"
 alias minec="cd ~/.minecraft && java -Xmx1024M -Xms512M -cp minecraft.jar net.minecraft.LauncherFrame &"
 alias config="gvim ~/.xmonad/xmonad.hs"
@@ -142,7 +147,13 @@ eval PR_HOST='${PR_YELLOW}%M${PR_NO_COLOR}' #SSH
 fi
 # set the prompt
 #PS1=$'${PR_CYAN}[${PR_USER}${PR_CYAN}@${PR_HOST}${PR_CYAN}][${PR_BLUE}%~${PR_CYAN}]${PR_USER_OP}'
-PS1=$'${PR_YELLOW} >${PR_RED}>${PR_YELLOW}> ${PR_BLUE}'
+#PS1=$'${PR_YELLOW} >${PR_RED}>${PR_YELLOW}> ${PR_BLUE}'
+PS1="%n${PR_YELLOW}@${PR_RED}%m ${PR_GREEN}"
 PS2=$'%_>'
 }
 setprompt
+
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
